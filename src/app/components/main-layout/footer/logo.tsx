@@ -8,13 +8,13 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '@/app/components/ui/too
 import { BasicsProps } from '@/app/components/ui/types';
 import { cn } from '@/lib/utils';
 
-type IFUTILogoProps = BasicsProps<'a'> & MotionProps;
+type IFUTILogoProps = BasicsProps<'a', 'href'> & MotionProps;
 
-export const FUTILogo: React.FC<IFUTILogoProps> = ({ className, ...rest }) => (
+export const FUTILogo: React.FC<IFUTILogoProps> = ({ className, href, ...rest }) => (
   <Tooltip>
     <TooltipTrigger asChild>
       <motion.a
-        href="https://www.futiwolf.com"
+        href={href || 'https://www.futiwolf.com'}
         className={cn(
           'futi-center relative cursor-pointer select-none font-russoOne text-xs text-[#737373] text-opacity-15',
           className,
