@@ -22,20 +22,19 @@ export const Footer: React.FC<IFooterProps> = ({ className, style }) => {
     switch (site) {
       case FUTISite.FUTIWOLF: {
         setBeianNumber('3');
-        document.title += ' - 诗与兽';
         break;
       }
       case FUTISite.FURRY: {
         setBeianNumber('7');
-        document.title += ' - 诗与兽';
         break;
       }
       default: {
         setBeianNumber('2');
-        document.title += ' - 一实无言';
         break;
       }
     }
+
+    document.title += ' - 伏科一';
   }, []);
 
   return (
